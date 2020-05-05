@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:queries/collections.dart';
 
 class Chapter {
   int id;
@@ -59,7 +60,7 @@ class Chapter {
 //list of chapter
 
 class ChaptersModel {
-  List<Chapter> chapters;
+  Collection<Chapter> chapters;
 
   ChaptersModel({
     this.chapters,
@@ -77,8 +78,8 @@ class ChaptersModel {
 
   factory ChaptersModel.fromJson(Map<String, dynamic> json) =>
       new ChaptersModel(
-        chapters: List<Chapter>.from(
-            json["chapters"].map((x) => Chapter.fromJson(x))),
+        chapters: Collection(List<Chapter>.from(
+            json["chapters"].map((x) => Chapter.fromJson(x)))),
       );
 
   Map<String, dynamic> toJson() => {

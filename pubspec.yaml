@@ -24,10 +24,31 @@ dependencies:
   provider: ^3.1.0+1
   font_awesome_flutter: ^8.5.0
   shimmer: ^1.0.1
+  tuple: ^1.0.3
+  audioplayers: ^0.13.5
+  share: ^0.6.3+4
+  http: ^0.12.0+3
+  intl: ^0.16.1
+  geolocator: ^5.1.5
+  queries: ^0.1.14
+  flutter_local_notifications: ^1.4.0
+  hijri: ^0.2.5
+  flutter_compass: ^0.4.1
+  scrollable_positioned_list: ^0.1.3
+  google_sign_in: ^4.4.1
+  firebase_auth: ^0.16.0
+  oauth2: ^1.5.0
+  flutter_launcher_icons: ^0.7.5 
+  
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/splash.png" 
 
 dev_dependencies:
   flutter_test:
@@ -51,6 +72,9 @@ flutter:
    - assets/quran-data/chapters/chapters.en.json
    - assets/quran-data/chapters/chapters.id.json
    - assets/quran-data/juz.json
+   - assets/quran-data/listkitab.json
+   - assets/quran-data/listhadist.json
+   - assets/quran-data/listbab.json
    - assets/quran-data/translations/id.indonesian.db
    - assets/quran-data/translations/en.sahih.db
    - assets/quran-data/quran-uthmani.db
@@ -67,12 +91,27 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+  fonts:
+    - family: SFPro
+      fonts:
+        - asset: assets/fonts/SFProDisplay-Black.ttf
+          weight: 900
+        - asset: assets/fonts/SFProDisplay-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/SFProDisplay-Heavy.ttf
+          weight: 800
+        - asset: assets/fonts/SFProDisplay-Light.ttf
+          weight: 300
+        - asset: assets/fonts/SFProDisplay-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/SFProDisplay-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/SFProDisplay-Semibold.ttf
+          weight: 600
+        - asset: assets/fonts/SFProDisplay-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/SFProDisplay-Ultralight.ttf
+          weight: 200
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

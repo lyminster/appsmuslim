@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "324236517532",
+    "firebase_url": "https://muslimapps-5bf88.firebaseio.com",
+    "project_id": "muslimapps-5bf88",
+    "storage_bucket": "muslimapps-5bf88.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324236517532:android:6ae6e40720f3cf068a0d59",
+        "android_client_info": {
+          "package_name": "ami.Muslimapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "324236517532-6tnu8notaat7q72t1f1m0ofj3ft01u0u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ami.Muslimapps",
+            "certificate_hash": "785170ba8449cadaa292ac2f5f0bdbf55d24c14c"
+          }
+        },
+        {
+          "client_id": "324236517532-jfaev3ctje753hve8gljrvabflh5bnq1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzNdkdpOZgo4C-kNgNg1Ww5SXGhwvXI24"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "324236517532-jfaev3ctje753hve8gljrvabflh5bnq1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

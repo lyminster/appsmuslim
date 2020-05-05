@@ -7,9 +7,9 @@ class ListSuraData extends ChangeNotifier {
   bool isGettingChapters = true;
   ChaptersModel chaptersModel = ChaptersModel();
 
-  ListSuraData(){
+  // ListSuraData(){
     
-  }
+  // }
 
   Future getChapters() async {
     try {
@@ -20,6 +20,22 @@ class ListSuraData extends ChangeNotifier {
     } finally {
       isGettingChapters = false;
       notifyListeners();
+    }
+  }
+
+  getcurrentchapter(suraNo){
+    for(int i = 0 ; i < chaptersModel.chapters.length ; i++){
+      if(chaptersModel.chapters[i].chapterNumber.toString() == suraNo){
+        return chaptersModel.chapters[i];
+      }
+    }
+  }
+
+  getname(String name){
+    for (int i = 0 ; i < chaptersModel.chapters.length ; i++){
+      if(chaptersModel.chapters[i].chapterNumber == int.parse(name)){
+        return chaptersModel.chapters[i].nameSimple;
+      }
     }
   }
 }

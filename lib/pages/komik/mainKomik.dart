@@ -1,5 +1,6 @@
 import 'package:appsmuslim/pages/komik/listKomik.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MainKomik extends StatefulWidget {
   @override
@@ -9,22 +10,52 @@ class MainKomik extends StatefulWidget {
 class _MainKomikState extends State<MainKomik> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(8.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Text(
-            "KOMIK ISLAMI",
-            style: TextStyle(
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 1.2),
+    return Stack(
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0.0, 50.0, 50.0, 0.0),
+          child: Container(
+            height: 150,
+            width: MediaQuery.of(context).size.width,
+            // decoration: BoxDecoration(
+            //   boxShadow: [
+            //     BoxShadow(
+            //       color: Colors.grey[300],
+            //       blurRadius: 11.0,
+            //     )
+            //   ],
+            // ),
+            child: Card(
+              color: Color(0xffB80707),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(30),
+                ),
+              ),
+            ),
           ),
-          SizedBox(
-            height: 10.0,
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20.0, 80.0, 85.0, 0.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                'Komik Islami',
+                style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+            ],
           ),
-          InkWell(
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20.0, 130.0, 20.0, 0.0),
+          child: InkWell(
             onTap: () {
               Navigator.push(
                 context,
@@ -32,65 +63,33 @@ class _MainKomikState extends State<MainKomik> {
               );
             },
             child: Container(
-              height: 200.0,
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey[300],
-                    blurRadius: 11.0,
-                  )
+              child: Stack(
+                children: <Widget>[
+                  ClipRRect(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(5),
+                      topRight: Radius.circular(20),
+                      bottomRight: Radius.circular(5),
+                      bottomLeft: Radius.circular(5),
+                    ),
+                    child: Image.asset('assets/images/thumbdepan.png'),
+                  ),
+                  Positioned(
+                    right: -125,
+                    bottom: 15,
+                    left: MediaQuery.of(context).size.width / 2.5,
+                    child: Icon(
+                      FontAwesomeIcons.angleDoubleRight,
+                      color: Colors.white,
+                      size: 25,
+                    ),
+                  ),
                 ],
-                borderRadius: BorderRadius.circular(10.0),
-                image: DecorationImage(
-                  image: AssetImage("assets/images/batman.jpg"),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Expanded(
-                      child: Text(
-                        "New Chapter",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18.0,
-                        ),
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: <Widget>[
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8.0),
-                            color: Colors.green,
-                          ),
-                          height: 30.0,
-                          width: 120.0,
-                          child: Center(
-                            child: Text(
-                              "View More",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: 1.2,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
               ),
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
